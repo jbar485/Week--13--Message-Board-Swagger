@@ -28,7 +28,7 @@
 # end
 #
 # Seed.begin
-
+                                    
 Group.destroy_all
 Message.destroy_all
 

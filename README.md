@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+Instructions  on API token encrypt == == ==  == https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api
