@@ -1,16 +1,19 @@
 class MessagesController < ApplicationController
 
   def index
-    @messages = Message.all
-    json_response(@messages)
+    group = Group.find(params[:group_id])
+    @message = group.messages
+    json_response(@message)
   end
 
   def show
+    @group = Group.find(params[:group_id])
     @message = Message.find(params[:id])
     json_response(@message)
   end
 
   def create
+    @group = Group.find(params[:group_id])
     @message = Message.create!(message_params)
     json_response(@message)
   end
@@ -39,6 +42,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.permit(:user_id, :content)
+    params.permit(:group_id, :content, :author)
   end
 end
